@@ -16,18 +16,8 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Strings for component 'block_videostar', language 'en'
- *
- * @package   block_videostar
- * @copyright  Daniel Neis <danielneis@gmail.com>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
-/**
- * Modified for use in MoodleBites for Developers Level 1
- * by Richard Jones & Justin Hunt.
- *
- * See: https://www.moodlebites.com/mod/page/view.php?id=24546
+ * Videostar Block to navigate a page embedded video.
+ * See: https://github.com/lore1986
  */
 
 // General
@@ -45,4 +35,7 @@ $string['blockinstances'] = 'Number of instances';
 $string['addinstances'] = 'Number of instances';
 $string['instancevideo'] = 'Time';
 $string['descriptionvideo'] = 'Content';
-
+$string['defaulturl'] = 'Iframe src url';
+$string['defaultid'] = 'Iframe id attribute';
+$string['defaultitle'] = 'Title of your video';
+$string['blockid'] = 'ID of IFrame element';

@@ -15,19 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
- *
- * @package   block_videostar
- * @copyright  Daniel Neis <danielneis@gmail.com>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * Videostar Block to navigate a page embedded video.
+ * See: https://github.com/lore1986
  */
 
-/**
- * Modified for use in MoodleBites for Developers Level 1
- * by Richard Jones & Justin Hunt.
- *
- * See: https://www.moodlebites.com/mod/page/view.php?id=24546
- */
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2020101000; // Minimal block

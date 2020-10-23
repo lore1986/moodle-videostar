@@ -1,53 +1,25 @@
 <?php
-// This file is part of Moodle - http://moodle.org/
-//
-// Moodle is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// Moodle is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+    // This file is part of Moodle - http://moodle.org/
+    //
+    // Moodle is free software: you can redistribute it and/or modify
+    // it under the terms of the GNU General Public License as published by
+    // the Free Software Foundation, either version 3 of the License, or
+    // (at your option) any later version.
+    //
+    // Moodle is distributed in the hope that it will be useful,
+    // but WITHOUT ANY WARRANTY; without even the implied warranty of
+    // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    // GNU General Public License for more details.
+    //
+    // You should have received a copy of the GNU General Public License
+    // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * block_videostar main file
- *
- * @package   block_videostar
- * @copyright  Daniel Neis <danielneis@gmail.com>
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-
-/**
- * Modified for use in MoodleBites for Developers Level 1
- * by Richard Jones & Justin Hunt.
- *
- * See: https://www.moodlebites.com/mod/page/view.php?id=24546
- */
+    /**
+     * Videostar Block to navigate a page embedded video.
+     * See: https://github.com/lore1986
+     */
 
 defined('MOODLE_INTERNAL') || die();
-
-/*
-
-Notice some rules that will keep plugin approvers happy when you want
-to register your plugin in the plugins database
-
-    Use 4 spaces to indent, no tabs
-    Use 8 spaces for continuation lines
-    Make sure every class has php doc to describe it
-    Describe the parameters of each class and function
-
-    https://docs.moodle.org/dev/Coding_style
-*/
-
-/**
- * Class videostar minimal required block class.
- *
- */
 
 
 class block_videostar extends block_base {
@@ -87,8 +59,14 @@ class block_videostar extends block_base {
 
         $videourl = $this->config->videourl;
         $videotitle = $this->config->text;
-        
-        $this->content->text .= $renderer->time_map_list_link($listitems, $videourl, $videotitle);
+        $videoid = $this->config->videoid;
+
+        $videoattributes = array();
+        $videoattributes['url'] = $videourl;
+        $videoattributes['title'] = $videotitle;
+        $videoattributes['idhtml'] = $videoid;
+
+        $this->content->text .= $renderer->time_map_list_link($listitems, $videoattributes);
 
         return $this->content;
 
